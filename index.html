@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Capybara</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito:wght@200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+</head>
+<body>
+    <div class="app">
+        <header>
+            <h1 id="title">Capybaras</h1>
+        </header>
+        <main>
+            <div class="hero">
+                <div class="img-wrapper-hero">
+                    <i class="material-symbols-outlined image-changers" id="right" onclick="changeSlide()">chevron_right</i>
+                    <i class="material-symbols-outlined image-changers" id="left" onclick="changeSlide()">chevron_left</i>
+                    <img src="Assets/capybarra-small-1.jpg" alt="Capybarra in a swimming pool" id="capybara-in-pool">
+                    <img src="Assets/capybarra-small-2.jpg" alt="Capybarra in the wild" id="capybara-in-wild" style="display: none;">
+                </div>
+                <span><b>Capybaras, The Worlds Chillest Animal</b></span>
+            </div>         
+
+            <div class="middle-info">
+                <div class="section" id="what-are-capybaras-section">
+                    <span id="what-are-capybaras-text">What are capybaras?</span>
+                    <p id="what-are-capybaras">Capybaras are semi-aquatic animals that are primarily found in South America. They live in forest and wetlands. They are herbivores, with their diet consisting of mainly grasses and fruits. They are the worlds largest rodents, being able to grow up to 1.3 metres(4.3 feet) long and weigh up to 79kg(174 pounds)!</p>
+                </div>               
+                
+                <div class="section" id="fun-facts-section">
+                    <span id="main-info">Some REALLY cool capybara fun facts.</span>
+                    <p id="extra-info">Click cards to see more info.</p>
+
+                    <div class="attribute-container fade-in" id="top">
+                    <div class="attribute" id="cute">
+                        <img src="Assets/capybara-small-4.jpg" alt="capybara looking into the ocean" class="attribute-img fun-fact-card" id="cute-img" onclick="changeSide('cute-flip', 'cute-img')">
+                        <div class="flipped-card fun-fact-card" id="cute-flip" onclick="changeSide('cute-img', 'cute-flip')">Capybaras are REALLY cute. In my opinion, they are one of the cutest animals there are!</div>
+                        <span class="attribute-text" id="cute-text">Cute</span>
+                    </div>
+                    <div class="attribute" id="loveable">
+                        <img src="Assets/capybara-small-5.jpg" alt="Loving capybara family" class="attribute-img fun-fact-card" id="loveable-img" onclick="changeSide('loveable-flip', 'loveable-img')">
+                        <div class="flipped-card fun-fact-card" id="loveable-flip" onclick="changeSide('loveable-img', 'loveable-flip')">Capybaras are one of, if not the most loveable animals on Earth! I mean, how can you disagree with that?</div>
+                        <span class="attribute-text" id="loveable-text">Lovable</span>
+                    </div>
+                    <div class="attribute" id="swimmers">
+                        <img src="Assets/capybara-swimming.jpg" alt="A group of capybaras swimming" class="attribute-img fun-fact-card" id="swimmers-img" onclick="changeSide('swimmers-flip', 'swimmers-img')">
+                        <div class="flipped-card fun-fact-card" id="swimmers-flip" onclick="changeSide('swimmers-img', 'swimmers-flip')">Capybaras are semi-aquatic animals that spend hours a day submerged under water to regulate their body temperature and prevent overheating. With this comes rapid swimming speeds, where they can swim as fast as 8km/h!</div>
+                        <span class="attribute-text" id="Swimmers-text">Swimmers</span>
+                    </div>
+                    </div>
+                    <div class="attribute-container fade-in" id="bottom">
+                        <div class="attribute" id="intelligent">
+                            <img src="Assets/albert_enstein.jpg" alt="albert_enstein" class="attribute-img fun-fact-card" id="intelligent-img" onclick="changeSide('intelligent-flip', 'intelligent-img')">
+                            <div class="flipped-card fun-fact-card" id="intelligent-flip" onclick="changeSide('intelligent-img', 'intelligent-flip')">Capybaras are really smart creatures. They have shown incredible problem solving skills, such as navigating obstacles to find food!</div>
+                            <span class="attribute-text" id="intelligent-text">Intelligent</span>
+                        </div>
+                        <div class="attribute" id="Social">
+                            <img src="Assets/capybara-small-7.jpg" alt="Capybaras drinking water together" class="attribute-img fun-fact-card" id="social-img" onclick="changeSide('social-flip', 'social-img')">
+                            <div class="flipped-card fun-fact-card" id="social-flip" onclick="changeSide('social-img', 'social-flip')">Capybaras are highly social animals, and are really socially intelligent! They communicate with one another through a variety of sounds, whistles, grunts and purrs!</div>
+                            <span class="attribute-text" id="social-text">Social</span>
+                        </div>
+                        <div class="attribute" id="runners">
+                            <img src="Assets/capybara-running.jpg" alt="A capybara running" class="attribute-img fun-fact-card" id="runners-img" onclick="changeSide('runners-flip', 'runners-img')">
+                            <div class="flipped-card fun-fact-card" id="runners-flip" onclick="changeSide('runners-img', 'runners-flip')">Despite how fat capybaras appear to be, they can run at great speeds, sometimes reaching up to 35 km/h! This is slightly faster than an average human! They use this speed to quickly outrun predators and danger.</div>
+                            <span class="attribute-text" id="runners-text">Runners</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <div class="fade-in-element fade-in">
+                        <p class="section-header" id="capys-title">This is cappy(he's meant to be a capybara)</p>
+
+                        <div class="capybara">
+                            <div class="eye left-eye">
+                                <div class="pupil"></div>
+                                <div class="eyelid" id="eyelid"></div>
+                            </div>
+
+                            <div class="eye right-eye">
+                                <div class="pupil"></div>
+                                <div class="eyelid" id="eyelid"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="fade-in-element fade-in">
+                        <p class="section-header">Shoud you adopt a capybara?</p>
+
+                        <p style="width: 40vw; text-align: center;">Yes! If you have the resources to properly care for one, I reckon they are the best, most cutest and most amazing animals to have. I dont even know if you can adopt them or not lol.</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p id="copyright">
+                Copryright &copy; 2026 Capybara, inc.
+            </p>
+            <p id="powered-by">
+                Powered By Grass
+            </p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
